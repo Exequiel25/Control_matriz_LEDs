@@ -1,0 +1,6 @@
+V3 3
+FL C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.vhd 2021/11/19.18:58:30 M.81d
+EN work/prueba1 1637359113 FL C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.vhd \
+      PB ieee/std_logic_1164 1290154108 PB ieee/STD_LOGIC_UNSIGNED 1290154110
+AR work/prueba1/Behavioral 1637359114 \
+      FL C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.vhd EN work/prueba1 1637359113

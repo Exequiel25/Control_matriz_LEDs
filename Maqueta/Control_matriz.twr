@@ -1,0 +1,282 @@
+--------------------------------------------------------------------------------
+Release 12.4 Trace  (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml Control_matriz.twx Control_matriz.ncd -o Control_matriz.twr
+Control_matriz.pcf -ucf pines.ucf
+
+Design file:              Control_matriz.ncd
+Physical constraint file: Control_matriz.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2010-11-18)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "CLK_IBUF1" PERIOD = 20 ns HIGH 40%;
+
+ 14 paths analyzed, 14 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   2.817ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Cuenta_3 (SLICE_X26Y82.F1), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     17.183ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Cuenta_0 (LATCH)
+  Destination:          Cuenta_3 (LATCH)
+  Requirement:          20.000ns
+  Data Path Delay:      2.817ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_IBUF falling at 8.000ns
+  Destination Clock:    CLK_IBUF falling at 28.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Cuenta_0 to Cuenta_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y82.XQ      Tcklo                 0.766   Cuenta<0>
+                                                       Cuenta_0
+    SLICE_X26Y82.F1      net (fanout=10)       1.159   Cuenta<0>
+    SLICE_X26Y82.CLK     Tfck                  0.892   Cuenta<3>
+                                                       Madd_Cuenta_add0000_xor<3>11
+                                                       Cuenta_3
+    -------------------------------------------------  ---------------------------
+    Total                                      2.817ns (1.658ns logic, 1.159ns route)
+                                                       (58.9% logic, 41.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Cuenta_3 (SLICE_X26Y82.F3), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     17.267ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Cuenta_1 (LATCH)
+  Destination:          Cuenta_3 (LATCH)
+  Requirement:          20.000ns
+  Data Path Delay:      2.733ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_IBUF falling at 8.000ns
+  Destination Clock:    CLK_IBUF falling at 28.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Cuenta_1 to Cuenta_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y82.YQ      Tcklo                 0.742   Cuenta<0>
+                                                       Cuenta_1
+    SLICE_X26Y82.F3      net (fanout=9)        1.099   Cuenta<1>
+    SLICE_X26Y82.CLK     Tfck                  0.892   Cuenta<3>
+                                                       Madd_Cuenta_add0000_xor<3>11
+                                                       Cuenta_3
+    -------------------------------------------------  ---------------------------
+    Total                                      2.733ns (1.634ns logic, 1.099ns route)
+                                                       (59.8% logic, 40.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Cuenta_2 (SLICE_X26Y82.G4), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     17.496ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Cuenta_1 (LATCH)
+  Destination:          Cuenta_2 (LATCH)
+  Requirement:          20.000ns
+  Data Path Delay:      2.504ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_IBUF falling at 8.000ns
+  Destination Clock:    CLK_IBUF falling at 28.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Cuenta_1 to Cuenta_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y82.YQ      Tcklo                 0.742   Cuenta<0>
+                                                       Cuenta_1
+    SLICE_X26Y82.G4      net (fanout=9)        0.870   Cuenta<1>
+    SLICE_X26Y82.CLK     Tgck                  0.892   Cuenta<3>
+                                                       Madd_Cuenta_add0000_xor<2>11
+                                                       Cuenta_2
+    -------------------------------------------------  ---------------------------
+    Total                                      2.504ns (1.634ns logic, 0.870ns route)
+                                                       (65.3% logic, 34.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "CLK_IBUF1" PERIOD = 20 ns HIGH 40%;
+--------------------------------------------------------------------------------
+
+Paths for end point An_3 (SLICE_X26Y83.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.166ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Cuenta_3 (LATCH)
+  Destination:          An_3 (LATCH)
+  Requirement:          0.000ns
+  Data Path Delay:      1.166ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_IBUF falling at 28.000ns
+  Destination Clock:    CLK_IBUF falling at 28.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Cuenta_3 to An_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y82.XQ      Tcklo                 0.613   Cuenta<3>
+                                                       Cuenta_3
+    SLICE_X26Y83.BX      net (fanout=5)        0.419   Cuenta<3>
+    SLICE_X26Y83.CLK     Tckdi       (-Th)    -0.134   An_3
+                                                       An_3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.166ns (0.747ns logic, 0.419ns route)
+                                                       (64.1% logic, 35.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point An_1 (SLICE_X22Y84.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.173ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Cuenta_1 (LATCH)
+  Destination:          An_1 (LATCH)
+  Requirement:          0.000ns
+  Data Path Delay:      1.176ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.011 - 0.008)
+  Source Clock:         CLK_IBUF falling at 28.000ns
+  Destination Clock:    CLK_IBUF falling at 28.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Cuenta_1 to An_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y82.YQ      Tcklo                 0.594   Cuenta<0>
+                                                       Cuenta_1
+    SLICE_X22Y84.BX      net (fanout=9)        0.448   Cuenta<1>
+    SLICE_X22Y84.CLK     Tckdi       (-Th)    -0.134   An_1
+                                                       An_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.176ns (0.728ns logic, 0.448ns route)
+                                                       (61.9% logic, 38.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point An_0 (SLICE_X22Y84.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.225ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Cuenta_0 (LATCH)
+  Destination:          An_0 (LATCH)
+  Requirement:          0.000ns
+  Data Path Delay:      1.228ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.011 - 0.008)
+  Source Clock:         CLK_IBUF falling at 28.000ns
+  Destination Clock:    CLK_IBUF falling at 28.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Cuenta_0 to An_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y82.XQ      Tcklo                 0.613   Cuenta<0>
+                                                       Cuenta_0
+    SLICE_X22Y84.BY      net (fanout=10)       0.463   Cuenta<0>
+    SLICE_X22Y84.CLK     Tckdi       (-Th)    -0.152   An_1
+                                                       An_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.228ns (0.765ns logic, 0.463ns route)
+                                                       (62.3% logic, 37.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "CLK_IBUF1" PERIOD = 20 ns HIGH 40%;
+--------------------------------------------------------------------------------
+Slack: 17.935ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 0.826ns (Tch)
+  Physical resource: An_1/CLK
+  Logical resource: An_1/CK
+  Location pin: SLICE_X22Y84.CLK
+  Clock network: CLK_IBUF
+--------------------------------------------------------------------------------
+Slack: 17.935ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 0.826ns (Tch)
+  Physical resource: An_1/CLK
+  Logical resource: An_0/CK
+  Location pin: SLICE_X22Y84.CLK
+  Clock network: CLK_IBUF
+--------------------------------------------------------------------------------
+Slack: 17.935ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 0.826ns (Tch)
+  Physical resource: Cuenta<0>/CLK
+  Logical resource: Cuenta_0/CK
+  Location pin: SLICE_X22Y82.CLK
+  Clock network: CLK_IBUF
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |         |    2.817|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 14 paths, 0 nets, and 19 connections
+
+Design statistics:
+   Minimum period:   2.817ns{1}   (Maximum frequency: 354.988MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Nov 19 19:33:43 2021 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 113 MB
+
+
+

@@ -1,0 +1,503 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Reading design: control_matriz.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "control_matriz.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "control_matriz"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : control_matriz
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx/Proyectos/ProyectoTD1/Prueba4/control_matriz.vhd" in Library work.
+Entity <control_matriz> compiled.
+Entity <control_matriz> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <control_matriz> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <control_matriz> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Xilinx/Proyectos/ProyectoTD1/Prueba4/control_matriz.vhd" line 68: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <addr>, <data>
+Entity <control_matriz> analyzed. Unit <control_matriz> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <control_matriz>.
+    Related source file is "C:/Xilinx/Proyectos/ProyectoTD1/Prueba4/control_matriz.vhd".
+WARNING:Xst:653 - Signal <frec> is used but never assigned. This sourceless signal will be automatically connected to value 00000001011111010111100000111111.
+WARNING:Xst:653 - Signal <data> is used but never assigned. This sourceless signal will be automatically connected to value 10000001.
+WARNING:Xst:737 - Found 4-bit latch for signal <An>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Q>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 4-bit latch for signal <addr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit adder for signal <addr$add0000> created at line 74.
+    Found 1-bit register for signal <clk>.
+    Found 32-bit up counter for signal <cuenta>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <control_matriz> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 1
+ 4-bit latch                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 1
+ 4-bit latch                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <control_matriz> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block control_matriz, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : control_matriz.ngr
+Top Level Output File Name         : control_matriz
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 152
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 31
+#      LUT2                        : 35
+#      LUT3                        : 1
+#      LUT4                        : 9
+#      MUXCY                       : 39
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 42
+#      FDC                         : 32
+#      FDE                         : 1
+#      LD_1                        : 1
+#      LDC                         : 4
+#      LDE_1                       : 4
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 1
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       41  out of   4656     0%  
+ Number of Slice Flip Flops:             37  out of   9312     0%  
+ Number of 4 input LUTs:                 79  out of   9312     0%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+    IOB Flip Flops:                       5
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK_50MHz                          | BUFGP                  | 33    |
+reset                              | IBUF+BUFG              | 5     |
+clk                                | NONE(An_0)             | 4     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 36    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.407ns (Maximum Frequency: 156.079MHz)
+   Minimum input arrival time before clock: 4.336ns
+   Maximum output required time after clock: 6.026ns
+   Maximum combinational path delay: 7.080ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_50MHz'
+  Clock period: 6.407ns (frequency: 156.079MHz)
+  Total number of paths / destination ports: 1585 / 34
+-------------------------------------------------------------------------
+Delay:               6.407ns (Levels of Logic = 33)
+  Source:            cuenta_1 (FF)
+  Destination:       cuenta_31 (FF)
+  Source Clock:      CLK_50MHz rising
+  Destination Clock: CLK_50MHz rising
+
+  Data Path: cuenta_1 to cuenta_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.622  cuenta_1 (cuenta_1)
+     LUT1:I0->O            1   0.704   0.000  Mcount_cuenta_cy<1>_rt (Mcount_cuenta_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  Mcount_cuenta_cy<1> (Mcount_cuenta_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<2> (Mcount_cuenta_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<3> (Mcount_cuenta_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<4> (Mcount_cuenta_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<5> (Mcount_cuenta_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<6> (Mcount_cuenta_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<7> (Mcount_cuenta_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<8> (Mcount_cuenta_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<9> (Mcount_cuenta_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<10> (Mcount_cuenta_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<11> (Mcount_cuenta_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<12> (Mcount_cuenta_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<13> (Mcount_cuenta_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<14> (Mcount_cuenta_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<15> (Mcount_cuenta_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<16> (Mcount_cuenta_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<17> (Mcount_cuenta_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<18> (Mcount_cuenta_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<19> (Mcount_cuenta_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<20> (Mcount_cuenta_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<21> (Mcount_cuenta_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<22> (Mcount_cuenta_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<23> (Mcount_cuenta_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<24> (Mcount_cuenta_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<25> (Mcount_cuenta_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<26> (Mcount_cuenta_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<27> (Mcount_cuenta_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<28> (Mcount_cuenta_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cuenta_cy<29> (Mcount_cuenta_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Mcount_cuenta_cy<30> (Mcount_cuenta_cy<30>)
+     XORCY:CI->O           1   0.804   0.499  Mcount_cuenta_xor<31> (Result<31>)
+     LUT2:I1->O            1   0.704   0.000  Mcount_cuenta_eqn_311 (Mcount_cuenta_eqn_31)
+     FDC:D                     0.308          cuenta_31
+    ----------------------------------------
+    Total                      6.407ns (5.286ns logic, 1.121ns route)
+                                       (82.5% logic, 17.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'reset'
+  Clock period: 2.741ns (frequency: 364.830MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               2.741ns (Levels of Logic = 1)
+  Source:            addr_0 (LATCH)
+  Destination:       addr_0 (LATCH)
+  Source Clock:      reset rising
+  Destination Clock: reset rising
+
+  Data Path: addr_0 to addr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            5   0.676   0.633  addr_0 (addr_0)
+     INV:I->O              1   0.704   0.420  Madd_addr_add0000_xor<0>11_INV_0 (addr_add0000<0>)
+     LDE_1:D                   0.308          addr_0
+    ----------------------------------------
+    Total                      2.741ns (1.688ns logic, 1.053ns route)
+                                       (61.6% logic, 38.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_50MHz'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.336ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       clk (FF)
+  Destination Clock: CLK_50MHz rising
+
+  Data Path: reset to clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            39   1.218   1.439  reset_IBUF (reset_IBUF1)
+     LUT2:I0->O            1   0.704   0.420  clk_and00001 (clk_and0000)
+     FDE:CE                    0.555          clk
+    ----------------------------------------
+    Total                      4.336ns (2.477ns logic, 1.859ns route)
+                                       (57.1% logic, 42.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'reset'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.368ns (Levels of Logic = 1)
+  Source:            Q (LATCH)
+  Destination:       Q (PAD)
+  Source Clock:      reset rising
+
+  Data Path: Q to Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             1   0.676   0.420  Q (Q_OBUF)
+     OBUF:I->O                 3.272          Q_OBUF (Q)
+    ----------------------------------------
+    Total                      4.368ns (3.948ns logic, 0.420ns route)
+                                       (90.4% logic, 9.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.368ns (Levels of Logic = 1)
+  Source:            An_3 (LATCH)
+  Destination:       An<3> (PAD)
+  Source Clock:      clk falling
+
+  Data Path: An_3 to An<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.676   0.420  An_3 (An_3)
+     OBUF:I->O                 3.272          An_3_OBUF (An<3>)
+    ----------------------------------------
+    Total                      4.368ns (3.948ns logic, 0.420ns route)
+                                       (90.4% logic, 9.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_50MHz'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              6.026ns (Levels of Logic = 2)
+  Source:            clk (FF)
+  Destination:       Dn<7> (PAD)
+  Source Clock:      CLK_50MHz rising
+
+  Data Path: clk to Dn<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.591   1.012  clk (clk)
+     LUT2:I1->O            2   0.704   0.447  Dn<7>1 (Dn_7_OBUF)
+     OBUF:I->O                 3.272          Dn_7_OBUF (Dn<7>)
+    ----------------------------------------
+    Total                      6.026ns (4.567ns logic, 1.459ns route)
+                                       (75.8% logic, 24.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               7.080ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       Dn<7> (PAD)
+
+  Data Path: reset to Dn<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            39   1.218   1.439  reset_IBUF (reset_IBUF1)
+     LUT2:I0->O            2   0.704   0.447  Dn<7>1 (Dn_7_OBUF)
+     OBUF:I->O                 3.272          Dn_7_OBUF (Dn<7>)
+    ----------------------------------------
+    Total                      7.080ns (5.194ns logic, 1.886ns route)
+                                       (73.4% logic, 26.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.18 secs
+ 
+--> 
+
+Total memory usage is 187724 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Xilinx\Proyectos\ProyectoTD1\Prueba\prueba1.ncd
+OUTFILE=C:\Xilinx\Proyectos\ProyectoTD1\Prueba\prueba1.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Xilinx\Proyectos\ProyectoTD1\Prueba
+LICENSE=WebPack
+USER_INFO=0_0_159

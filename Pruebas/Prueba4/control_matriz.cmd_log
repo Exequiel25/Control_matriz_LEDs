@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba4/control_matriz.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba4/control_matriz.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 control_matriz.ngc control_matriz.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o control_matriz_map.ncd control_matriz.ngd control_matriz.pcf 
+par -w -intstyle ise -ol high -t 1 control_matriz_map.ncd control_matriz.ncd control_matriz.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml control_matriz.twx control_matriz.ncd -o control_matriz.twr control_matriz.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f control_matriz.ut control_matriz.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba4/control_matriz.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba4/control_matriz.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 control_matriz.ngc control_matriz.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o control_matriz_map.ncd control_matriz.ngd control_matriz.pcf 
+par -w -intstyle ise -ol high -t 1 control_matriz_map.ncd control_matriz.ncd control_matriz.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml control_matriz.twx control_matriz.ncd -o control_matriz.twr control_matriz.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f control_matriz.ut control_matriz.ncd 

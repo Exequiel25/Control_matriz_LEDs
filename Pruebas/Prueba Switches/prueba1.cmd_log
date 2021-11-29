@@ -1,0 +1,69 @@
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml prueba1.twx prueba1.ncd -o prueba1.twr prueba1.pcf 
+bitgen -intstyle ise -f prueba1.ut prueba1.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml prueba1.twx prueba1.ncd -o prueba1.twr prueba1.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f prueba1.ut prueba1.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml prueba1.twx prueba1.ncd -o prueba1.twr prueba1.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f prueba1.ut prueba1.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml prueba1.twx prueba1.ncd -o prueba1.twr prueba1.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f prueba1.ut prueba1.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml prueba1.twx prueba1.ncd -o prueba1.twr prueba1.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f prueba1.ut prueba1.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml prueba1.twx prueba1.ncd -o prueba1.twr prueba1.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f prueba1.ut prueba1.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml prueba1.twx prueba1.ncd -o prueba1.twr prueba1.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f prueba1.ut prueba1.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml prueba1.twx prueba1.ncd -o prueba1.twr prueba1.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f prueba1.ut prueba1.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml prueba1.twx prueba1.ncd -o prueba1.twr prueba1.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f prueba1.ut prueba1.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.xst" -ofn "C:/Xilinx/Proyectos/ProyectoTD1/Prueba/prueba1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pines.ucf -p xc3s500e-fg320-4 prueba1.ngc prueba1.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o prueba1_map.ncd prueba1.ngd prueba1.pcf 
+par -w -intstyle ise -ol high -t 1 prueba1_map.ncd prueba1.ncd prueba1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml prueba1.twx prueba1.ncd -o prueba1.twr prueba1.pcf -ucf pines.ucf 
+bitgen -intstyle ise -f prueba1.ut prueba1.ncd 

@@ -1,0 +1,395 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: prueba2.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "prueba2.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "prueba2"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : prueba2
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx/Proyectos/ProyectoTD1/Prueba2/prueba2.vhd" in Library work.
+Entity <prueba2> compiled.
+Entity <prueba2> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <prueba2> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <prueba2> in library <work> (Architecture <behavioral>).
+Entity <prueba2> analyzed. Unit <prueba2> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <prueba2>.
+    Related source file is "C:/Xilinx/Proyectos/ProyectoTD1/Prueba2/prueba2.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <CLK_aux>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 4-bit latch for signal <Cuenta>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit adder for signal <Cuenta$add0000> created at line 68.
+    Found 16-bit down counter for signal <TIMER>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <prueba2> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 1
+ 16-bit down counter                                   : 1
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 4-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 1
+ 16-bit down counter                                   : 1
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 4-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <prueba2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block prueba2, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : prueba2.ngr
+Top Level Output File Name         : prueba2
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 64
+#      GND                         : 1
+#      INV                         : 17
+#      LUT1                        : 1
+#      LUT2                        : 5
+#      LUT3                        : 1
+#      LUT4                        : 7
+#      MUXCY                       : 15
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 21
+#      FDP                         : 16
+#      LD_1                        : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       16  out of   4656     0%  
+ Number of Slice Flip Flops:             21  out of   9312     0%  
+ Number of 4 input LUTs:                 31  out of   9312     0%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------+------------------------+-------+
+Clock Signal                        | Clock buffer(FF name)  | Load  |
+------------------------------------+------------------------+-------+
+CLK_aux_not0002(CLK_aux_not000235:O)| NONE(*)(CLK_aux)       | 5     |
+CLK                                 | BUFGP                  | 16    |
+------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------+------------------------+-------+
+Control Signal                             | Buffer(FF name)        | Load  |
+-------------------------------------------+------------------------+-------+
+CLK_aux_not0002_inv(CLK_aux_not0002_inv1:O)| NONE(TIMER_0)          | 16    |
+-------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.319ns (Maximum Frequency: 231.535MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 5.880ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_aux_not0002'
+  Clock period: 2.741ns (frequency: 364.830MHz)
+  Total number of paths / destination ports: 11 / 5
+-------------------------------------------------------------------------
+Delay:               2.741ns (Levels of Logic = 1)
+  Source:            CLK_aux (LATCH)
+  Destination:       CLK_aux (LATCH)
+  Source Clock:      CLK_aux_not0002 rising
+  Destination Clock: CLK_aux_not0002 rising
+
+  Data Path: CLK_aux to CLK_aux
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             5   0.676   0.633  CLK_aux (CLK_aux)
+     INV:I->O              1   0.704   0.420  CLK_aux_not00031_INV_0 (CLK_aux_not0003)
+     LD_1:D                    0.308          CLK_aux
+    ----------------------------------------
+    Total                      2.741ns (1.688ns logic, 1.053ns route)
+                                       (61.6% logic, 38.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 4.319ns (frequency: 231.535MHz)
+  Total number of paths / destination ports: 136 / 16
+-------------------------------------------------------------------------
+Delay:               4.319ns (Levels of Logic = 17)
+  Source:            TIMER_0 (FF)
+  Destination:       TIMER_15 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: TIMER_0 to TIMER_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.591   0.622  TIMER_0 (TIMER_0)
+     LUT1:I0->O            1   0.704   0.000  Mcount_TIMER_cy<0>_rt (Mcount_TIMER_cy<0>_rt)
+     MUXCY:S->O            1   0.464   0.000  Mcount_TIMER_cy<0> (Mcount_TIMER_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<1> (Mcount_TIMER_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<2> (Mcount_TIMER_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<3> (Mcount_TIMER_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<4> (Mcount_TIMER_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<5> (Mcount_TIMER_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<6> (Mcount_TIMER_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<7> (Mcount_TIMER_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<8> (Mcount_TIMER_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<9> (Mcount_TIMER_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<10> (Mcount_TIMER_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<11> (Mcount_TIMER_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<12> (Mcount_TIMER_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<13> (Mcount_TIMER_cy<13>)
+     MUXCY:CI->O           0   0.059   0.000  Mcount_TIMER_cy<14> (Mcount_TIMER_cy<14>)
+     XORCY:CI->O           1   0.804   0.000  Mcount_TIMER_xor<15> (Result<15>)
+     FDP:D                     0.308          TIMER_15
+    ----------------------------------------
+    Total                      4.319ns (3.697ns logic, 0.622ns route)
+                                       (85.6% logic, 14.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_aux_not0002'
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Offset:              5.880ns (Levels of Logic = 2)
+  Source:            CLK_aux (LATCH)
+  Destination:       An<3> (PAD)
+  Source Clock:      CLK_aux_not0002 rising
+
+  Data Path: CLK_aux to An<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             5   0.676   0.808  CLK_aux (CLK_aux)
+     LUT2:I0->O            1   0.704   0.420  An<3>1 (An_3_OBUF)
+     OBUF:I->O                 3.272          An_3_OBUF (An<3>)
+    ----------------------------------------
+    Total                      5.880ns (4.652ns logic, 1.228ns route)
+                                       (79.1% logic, 20.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.86 secs
+ 
+--> 
+
+Total memory usage is 187276 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
