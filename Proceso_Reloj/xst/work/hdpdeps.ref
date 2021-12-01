@@ -1,0 +1,8 @@
+V3 3
+FL "//vmware-host/shared folders/Codigos/ProyectoTD1/Proceso_Reloj/proceso_clk.vhd" 2021/11/30.23:50:00 M.81d
+EN work/proceso_clk 1638327003 \
+      FL "//vmware-host/shared folders/Codigos/ProyectoTD1/Proceso_Reloj/proceso_clk.vhd" \
+      PB ieee/std_logic_1164 1290154108
+AR work/proceso_clk/Behavioral 1638327004 \
+      FL "//vmware-host/shared folders/Codigos/ProyectoTD1/Proceso_Reloj/proceso_clk.vhd" \
+      EN work/proceso_clk 1638327003

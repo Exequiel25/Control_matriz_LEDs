@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Z:\Codigos\ProyectoTD1\Maqueta_Pro\Control_matriz.ncd
+OUTFILE=Z:\Codigos\ProyectoTD1\Maqueta_Pro\Control_matriz.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=Z:\Codigos\ProyectoTD1\Maqueta_Pro
+LICENSE=WebPack
+USER_INFO=0_0_159

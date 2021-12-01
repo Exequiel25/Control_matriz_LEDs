@@ -32,9 +32,8 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 --use UNISIM.VComponents.all;
 
 entity Control_matriz is
-    Port ( CLK : in  STD_LOGIC;
+    Port ( CLK_50MHz : in  STD_LOGIC;
 			  Reset : in STD_LOGIC;
-			  LED : out std_logic;
 			  An : out  STD_LOGIC_VECTOR (3 downto 0);
            Dn : out  STD_LOGIC_VECTOR (7 downto 0));		  
 end Control_matriz;
@@ -44,30 +43,44 @@ architecture Behavioral of Control_matriz is
 -- CONTADORES
 signal Cuenta : std_logic_vector(3 downto 0) := "0000";
 signal despla : std_logic_vector(3 downto 0) := "0000";
---signal TIMER : std_logic_vector(23 downto 0) := "111111111111111111111111";
---signal TIMER : std_logic_vector(19 downto 0) := "11111111111111111111";
-signal TIMER : std_logic_vector(15 downto 0) := "1111111111111111";
+
+signal TIMER : integer := 65536;
 
 -- CONSTANTES
-signal VUELTA_MAX : integer := 10;
+signal VUELTA_MAX : integer := 50;
 
 -- VARIABLES
 signal vuelta_actual : integer := 0;
-signal CLK_aux : std_logic := '0';
+
+-- Reloj auxiliar derivado del integrado a la placa
+signal reloj : std_logic := '0';
 
 begin
 
-process(CLK, Reset, CLK_aux, TIMER) begin
+process(CLK_50MHz, Reset) begin
 	-- los botones normalmente estan en 1
 	if Reset = '1' then
+		TIMER <= 65536;
+		reloj <= '0';
+	elsif CLK_50MHz'event and CLK_50MHz = '1' then
+		-- divisor de frecuencia / generador de reloj auxiliar
+		TIMER <= TIMER -1;
+		if TIMER = 0 then
+			reloj <= not reloj;
+		end if;
+	end if;
+end process;
+	
+process(reloj, Reset) begin
+	if Reset = '1' then
+		-- seteamos todos los valores a nulo
 		An <= "0000";
 		Cuenta <= "0000";
 		despla <= "0000";
-		LED <= '0';
-	elsif CLK = '1' then
+	elsif reloj = '1' then
+		-- actualizamos direccion y su dato correspondiente
 		An <= Cuenta;
 		Cuenta <= Cuenta+1;
-		LED <= '1';
 		
 		if Cuenta = despla then
 			Dn <= "01111111";
@@ -82,35 +95,19 @@ process(CLK, Reset, CLK_aux, TIMER) begin
 		end if;
 		
 	else
+		-- reloj = '0'
 		Dn <= "00000000";
-		LED <= '0';
 	end if;
 	
+	-- se ha completado una vuelta
 	if Cuenta = "1111" then
 		vuelta_actual <= vuelta_actual +1;
 	end if;
+	-- actualizamos el ciclo de desplazamiento
 	if vuelta_actual = VUELTA_MAX then
 		despla <= despla +1;
 	end if;
 	
---	if rising_edge(CLK) then
---		TIMER <= TIMER -1;
---	end if;
-	
---	if TIMER = "00000000000000000000" then
---		CLK_aux <= not(CLK_aux);
---		TIMER <= "11111111111111111111";
---	end if;
-	if rising_edge(CLK) then
-		TIMER <= TIMER -1;
-	end if;
-	
-	if TIMER = "000000000000000" then
-		CLK_aux <= not(CLK_aux);
-		TIMER <= "1111111111111111";
-	end if;
-	
 end process;
-
 
 end Behavioral;

@@ -1,0 +1,2 @@
+vhdl work "control_matriz.vhd"
+vhdl work "control_matriz_tb.vhd"

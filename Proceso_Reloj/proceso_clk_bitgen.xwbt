@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Z:\Codigos\ProyectoTD1\Proceso_Reloj\proceso_clk.ncd
+OUTFILE=Z:\Codigos\ProyectoTD1\Proceso_Reloj\proceso_clk.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=Z:\Codigos\ProyectoTD1\Proceso_Reloj
+LICENSE=WebPack
+USER_INFO=0_0_159

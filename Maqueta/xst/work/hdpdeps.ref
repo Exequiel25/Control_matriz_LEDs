@@ -1,8 +1,8 @@
 V3 3
-FL C:/Xilinx/Proyectos/ProyectoTD1/Maqueta/Control_matriz.vhd 2021/11/19.19:33:20 M.81d
-EN work/Control_matriz 1637361203 \
-      FL C:/Xilinx/Proyectos/ProyectoTD1/Maqueta/Control_matriz.vhd \
+FL "//vmware-host/shared folders/Codigos/ProyectoTD1/Maqueta_10MHz/control_matriz.vhd" 2021/11/30.23:46:22 M.81d
+EN work/Control_matriz 1638329398 \
+      FL "//vmware-host/shared folders/Codigos/ProyectoTD1/Maqueta_10MHz/control_matriz.vhd" \
       PB ieee/std_logic_1164 1290154108 PB ieee/STD_LOGIC_UNSIGNED 1290154110
-AR work/Control_matriz/Behavioral 1637361204 \
-      FL C:/Xilinx/Proyectos/ProyectoTD1/Maqueta/Control_matriz.vhd \
-      EN work/Control_matriz 1637361203
+AR work/Control_matriz/Behavioral 1638329399 \
+      FL "//vmware-host/shared folders/Codigos/ProyectoTD1/Maqueta_10MHz/control_matriz.vhd" \
+      EN work/Control_matriz 1638329398

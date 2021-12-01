@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Xilinx\Proyectos\ProyectoTD1\Maqueta\Control_matriz_tb_isim_beh.exe -gui -tclbatch isim.cmd -wdb C:/Xilinx/Proyectos/ProyectoTD1/Maqueta/Control_matriz_tb_isim_beh.wdb 
+Running: Z:\Codigos\ProyectoTD1\Maqueta_10MHz\control_matriz_tb_isim_beh.exe -gui -tclbatch isim.cmd -wdb Z:/Codigos/ProyectoTD1/Maqueta_10MHz/control_matriz_tb_isim_beh.wdb 
 ISim M.81d (signature 0xcb73ee62)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.

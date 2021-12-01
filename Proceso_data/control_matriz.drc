@@ -1,0 +1,8 @@
+Release 12.4 Drc M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Wed Dec 01 00:26:30 2021
+
+drc -z Control_matriz.ncd Control_matriz.pcf
+
+DRC detected 0 errors and 0 warnings.

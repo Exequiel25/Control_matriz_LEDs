@@ -1,0 +1,29 @@
+Command line:
+   control_matriz_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49286
+
+Wed Dec 01 00:29:33 2021
+
+
+ Elaboration Time: 0.1092 sec
+
+ Current Memory Usage: 640.946 Meg
+
+ Total Signals          : 14
+ Total Nets             : 26
+ Total Signal Drivers   : 8
+ Total Blocks           : 5
+ Total Primitive Blocks : 4
+ Total Processes        : 4
+ Total Traceable Variables  : 11
+ Total Scalar Nets and Variables : 405
+Total Line Count : 30
+
+ Total Simulation Time: 0.1248 sec
+
+ Current Memory Usage: 640.946 Meg
+
+Wed Dec 01 00:29:40 2021
+

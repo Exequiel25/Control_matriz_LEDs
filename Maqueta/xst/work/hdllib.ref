@@ -1,2 +1,2 @@
-AR control_matriz behavioral C:/Xilinx/Proyectos/ProyectoTD1/Maqueta/Control_matriz.vhd sub00/vhpl01 1637361204
-EN control_matriz NULL C:/Xilinx/Proyectos/ProyectoTD1/Maqueta/Control_matriz.vhd sub00/vhpl00 1637361203
+AR control_matriz behavioral "//vmware-host/shared folders/Codigos/ProyectoTD1/Maqueta_10MHz/control_matriz.vhd" sub00/vhpl01 1638329399
+EN control_matriz NULL "//vmware-host/shared folders/Codigos/ProyectoTD1/Maqueta_10MHz/control_matriz.vhd" sub00/vhpl00 1638329398

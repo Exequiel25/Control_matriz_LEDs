@@ -1,0 +1,2 @@
+vhdl work "proceso_clk.vhd"
+vhdl work "proceso_reloj_tb.vhd"
