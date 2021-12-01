@@ -6,7 +6,7 @@
 Se deja a continuación el código procedente de la carpeta "Maqueta_Pro"
 
 ---
-
+```
 ----------------------------------------------------------------------------------
 -- Company: 
 -- Engineer: 
@@ -122,3 +122,4 @@ An <= addr;
 Dn <= data;
 
 end Behavioral;
+```
