@@ -42,8 +42,8 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity Control_matriz is
     Port ( CLK_50MHz : in  STD_LOGIC;
-			  Reset : in STD_LOGIC;
-			  An : out  STD_LOGIC_VECTOR (3 downto 0);
+	   Reset : in STD_LOGIC;
+	   An : out  STD_LOGIC_VECTOR (3 downto 0);
            Dn : out  STD_LOGIC_VECTOR (7 downto 0));		  
 end Control_matriz;
 
