@@ -53,6 +53,7 @@ process(CLK_50MHz, Reset) begin
 		TIMER <= TIMER -1;
 		if TIMER = 0 then
 			clk_aux <= not clk_aux;
+			TIMER <= TIMER -1;
 		end if;
 	end if;
 end process;
