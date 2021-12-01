@@ -44,7 +44,7 @@ architecture Behavioral of Control_matriz is
 signal addr : std_logic_vector(3 downto 0) := "0000";
 signal despla : std_logic_vector(3 downto 0) := "0000";
 
-signal TIMER : integer := 65536;
+signal TIMER : integer := 1000000;
 
 -- CONSTANTES
 signal VUELTA_MAX : integer := 50;
