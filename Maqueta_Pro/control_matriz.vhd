@@ -61,14 +61,14 @@ begin
 process(CLK_50MHz, Reset) begin
 	-- los botones normalmente estan en 1
 	if Reset = '1' then
-		TIMER <= 65536;
+		TIMER <= 1000000;
 		reloj <= '0';
 	elsif CLK_50MHz'event and CLK_50MHz = '1' then
 		-- divisor de frecuencia / generador de reloj auxiliar
 		TIMER <= TIMER -1;
 		if TIMER = 0 then
 			reloj <= not reloj;
-			TIMER <= 65536;
+			TIMER <= 1000000;
 		end if;
 	end if;
 end process;
