@@ -11,13 +11,13 @@
          <ClosedNode>/control_matriz - Behavioral Z:|Codigos|ProyectoTD1|Maqueta_Pro|control_matriz.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Control_matriz - Behavioral (Z:/Codigos/ProyectoTD1/Maqueta_Pro/control_matriz.vhd)</SelectedItem>
+         <SelectedItem>Control_matriz - Behavioral (Z:/Codigos/Control_matriz_LEDs/Maqueta_Pro/control_matriz.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000de000000020000000000000000000000000000000064ffffffff000000810000000000000002000000de0000000100000000000000000000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Control_matriz - Behavioral (Z:/Codigos/ProyectoTD1/Maqueta_Pro/control_matriz.vhd)</CurrentItem>
+      <CurrentItem>Control_matriz - Behavioral (Z:/Codigos/Control_matriz_LEDs/Maqueta_Pro/control_matriz.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>

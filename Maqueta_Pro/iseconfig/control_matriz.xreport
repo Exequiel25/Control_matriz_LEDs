@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-12-01T00:41:14</DateModified>
+  <DateModified>2021-12-05T22:21:04</DateModified>
   <ModuleName>control_matriz</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>//vmware-host/shared folders/Codigos/ProyectoTD1/Maqueta_Pro/iseconfig/Control_matriz.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/Codigos/ProyectoTD1/Maqueta_Pro\</ImplementationReportsDirectory>
+  <SavedFilePath>//vmware-host/shared folders/Codigos/Control_matriz_LEDs/Maqueta_Pro/iseconfig/Control_matriz.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>Z:/Codigos/Control_matriz_LEDs/Maqueta_Pro\</ImplementationReportsDirectory>
   <DateInitialized>2021-12-01T00:02:13</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

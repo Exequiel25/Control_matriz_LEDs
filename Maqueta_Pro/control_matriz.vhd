@@ -33,8 +33,8 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity Control_matriz is
     Port ( CLK_50MHz : in  STD_LOGIC;
-	   Reset : in STD_LOGIC;
-	   An : out  STD_LOGIC_VECTOR (3 downto 0);
+			  Reset : in STD_LOGIC;
+			  An : out  STD_LOGIC_VECTOR (3 downto 0);
            Dn : out  STD_LOGIC_VECTOR (7 downto 0));		  
 end Control_matriz;
 
@@ -42,7 +42,7 @@ architecture Behavioral of Control_matriz is
 
 -- CONTADORES
 signal addr : std_logic_vector(3 downto 0) := "0000";
-signal despla : std_logic_vector(3 downto 0) := "0000";
+signal despla : std_logic_vector(3 downto 0) := "1111";
 
 signal TIMER : integer := 1000000;
 
@@ -77,18 +77,18 @@ process(reloj, Reset) begin
 	if Reset = '1' then
 		-- seteamos todos los valores a nulo
 		addr <= "0000";
-		despla <= "0000";
+		despla <= "1111";
 	elsif reloj = '1' then
 		-- actualizamos direccion y su dato correspondiente
 		addr <= addr +1;
 		
 		if addr = despla then
 			data <= "01111111";
-		elsif addr = despla+1 then
+		elsif addr = despla-1 then
 			data <= "01001000";
-		elsif addr = despla+2 then
+		elsif addr = despla-2 then
 			data <= "01001000";
-		elsif addr = despla+3 then
+		elsif addr = despla-3 then
 			data <= "01111111";
 		else
 			data <= "00000000";
@@ -105,7 +105,7 @@ process(reloj, Reset) begin
 	end if;
 	-- actualizamos el ciclo de desplazamiento
 	if vuelta_actual = VUELTA_MAX then
-		despla <= despla +1;
+		despla <= despla -1;
 	end if;
 	
 end process;

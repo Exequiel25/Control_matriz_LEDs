@@ -1,0 +1,555 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.69 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.69 secs
+ 
+--> Reading design: Control_matriz.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Control_matriz.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Control_matriz"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Control_matriz
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//vmware-host/shared folders/Codigos/Control_matriz_LEDs/Maqueta_ROM/control_matriz.vhd" in Library work.
+Entity <control_matriz> compiled.
+Entity <control_matriz> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Control_matriz> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Control_matriz> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "//vmware-host/shared folders/Codigos/Control_matriz_LEDs/Maqueta_ROM/control_matriz.vhd" line 85: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ROM>, <addr>, <vuelta_actual>, <VUELTA_MAX>
+Entity <Control_matriz> analyzed. Unit <Control_matriz> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Control_matriz>.
+    Related source file is "//vmware-host/shared folders/Codigos/Control_matriz_LEDs/Maqueta_ROM/control_matriz.vhd".
+WARNING:Xst:653 - Signal <VUELTA_MAX> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000110010.
+WARNING:Xst:1781 - Signal <ROM> is used but never assigned. Tied to default value.
+WARNING:Xst:737 - Found 8-bit latch for signal <rdata>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <vuelta_actual>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 4-bit latch for signal <despla>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 4-bit latch for signal <addr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16x8-bit ROM for signal <$varindex0000> created at line 92.
+    Found 4-bit adder for signal <addr$add0000> created at line 94.
+    Found 4-bit adder for signal <despla$addsub0000> created at line 104.
+    Found 1-bit register for signal <reloj>.
+    Found 4-bit adder for signal <ROM$add0000> created at line 92.
+    Found 32-bit down counter for signal <TIMER>.
+    Found 32-bit adder for signal <vuelta_actual$add0000> created at line 100.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+Unit <Control_matriz> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 3
+# Counters                                             : 1
+ 32-bit down counter                                   : 1
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Latches                                              : 4
+ 32-bit latch                                          : 1
+ 4-bit latch                                           : 2
+ 8-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 3
+# Counters                                             : 1
+ 32-bit down counter                                   : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Latches                                              : 4
+ 32-bit latch                                          : 1
+ 4-bit latch                                           : 2
+ 8-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <rdata_7> has a constant value of 0 in block <Control_matriz>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <rdata_3> in Unit <Control_matriz> is equivalent to the following FF/Latch, which will be removed : <rdata_6> 
+INFO:Xst:2261 - The FF/Latch <rdata_0> in Unit <Control_matriz> is equivalent to the following 4 FFs/Latches, which will be removed : <rdata_1> <rdata_2> <rdata_4> <rdata_5> 
+
+Optimizing unit <Control_matriz> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Control_matriz, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Control_matriz.ngr
+Top Level Output File Name         : Control_matriz
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 282
+#      GND                         : 1
+#      INV                         : 34
+#      LUT1                        : 32
+#      LUT2                        : 39
+#      LUT3                        : 4
+#      LUT3_L                      : 1
+#      LUT4                        : 25
+#      LUT4_D                      : 1
+#      LUT4_L                      : 2
+#      MUXCY                       : 78
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 75
+#      FDC                         : 25
+#      FDCE                        : 1
+#      FDP                         : 7
+#      LD                          : 32
+#      LDC                         : 4
+#      LDCP                        : 4
+#      LDE_1                       : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 1
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       71  out of   4656     1%  
+ Number of Slice Flip Flops:             75  out of   9312     0%  
+ Number of 4 input LUTs:                138  out of   9312     1%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    232     6%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------+-------------------------+-------+
+Clock Signal                                          | Clock buffer(FF name)   | Load  |
+------------------------------------------------------+-------------------------+-------+
+CLK_50MHz                                             | BUFGP                   | 33    |
+reloj                                                 | NONE(addr_0)            | 4     |
+Reset                                                 | IBUF+BUFG               | 6     |
+vuelta_actual_cmp_eq00001(vuelta_actual_cmp_eq00001:O)| BUFG(*)(vuelta_actual_0)| 32    |
+------------------------------------------------------+-------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------+------------------------+-------+
+Control Signal                         | Buffer(FF name)        | Load  |
+---------------------------------------+------------------------+-------+
+Reset                                  | IBUF                   | 37    |
+despla_0__and0000(despla_0__and00001:O)| NONE(despla_0)         | 1     |
+despla_0__and0001(despla_0__and00011:O)| NONE(despla_0)         | 1     |
+despla_1__and0000(despla_1__and00001:O)| NONE(despla_1)         | 1     |
+despla_1__and0001(despla_1__and00011:O)| NONE(despla_1)         | 1     |
+despla_2__and0000(despla_2__and00001:O)| NONE(despla_2)         | 1     |
+despla_2__and0001(despla_2__and00011:O)| NONE(despla_2)         | 1     |
+despla_3__and0000(despla_3__and00001:O)| NONE(despla_3)         | 1     |
+despla_3__and0001(despla_3__and00011:O)| NONE(despla_3)         | 1     |
+---------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.384ns (Maximum Frequency: 106.564MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.830ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_50MHz'
+  Clock period: 6.562ns (frequency: 152.393MHz)
+  Total number of paths / destination ports: 1585 / 34
+-------------------------------------------------------------------------
+Delay:               6.562ns (Levels of Logic = 34)
+  Source:            TIMER_0 (FF)
+  Destination:       TIMER_31 (FF)
+  Source Clock:      CLK_50MHz rising
+  Destination Clock: CLK_50MHz rising
+
+  Data Path: TIMER_0 to TIMER_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.622  TIMER_0 (TIMER_0)
+     LUT1:I0->O            1   0.704   0.000  Mcount_TIMER_cy<0>_rt (Mcount_TIMER_cy<0>_rt)
+     MUXCY:S->O            1   0.464   0.000  Mcount_TIMER_cy<0> (Mcount_TIMER_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<1> (Mcount_TIMER_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<2> (Mcount_TIMER_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<3> (Mcount_TIMER_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<4> (Mcount_TIMER_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<5> (Mcount_TIMER_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<6> (Mcount_TIMER_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<7> (Mcount_TIMER_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<8> (Mcount_TIMER_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<9> (Mcount_TIMER_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<10> (Mcount_TIMER_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<11> (Mcount_TIMER_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<12> (Mcount_TIMER_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<13> (Mcount_TIMER_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<14> (Mcount_TIMER_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<15> (Mcount_TIMER_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<16> (Mcount_TIMER_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<17> (Mcount_TIMER_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<18> (Mcount_TIMER_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<19> (Mcount_TIMER_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<20> (Mcount_TIMER_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<21> (Mcount_TIMER_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<22> (Mcount_TIMER_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<23> (Mcount_TIMER_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<24> (Mcount_TIMER_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<25> (Mcount_TIMER_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<26> (Mcount_TIMER_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<27> (Mcount_TIMER_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<28> (Mcount_TIMER_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_TIMER_cy<29> (Mcount_TIMER_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Mcount_TIMER_cy<30> (Mcount_TIMER_cy<30>)
+     XORCY:CI->O           1   0.804   0.595  Mcount_TIMER_xor<31> (Result<31>)
+     LUT2:I0->O            1   0.704   0.000  Mcount_TIMER_eqn_311 (Mcount_TIMER_eqn_31)
+     FDC:D                     0.308          TIMER_31
+    ----------------------------------------
+    Total                      6.562ns (5.345ns logic, 1.217ns route)
+                                       (81.5% logic, 18.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'reloj'
+  Clock period: 2.990ns (frequency: 334.448MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               2.990ns (Levels of Logic = 1)
+  Source:            addr_0 (LATCH)
+  Destination:       addr_0 (LATCH)
+  Source Clock:      reloj falling
+  Destination Clock: reloj falling
+
+  Data Path: addr_0 to addr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q             10   0.676   0.882  addr_0 (addr_0)
+     INV:I->O              1   0.704   0.420  Madd_addr_add0000_xor<0>11_INV_0 (addr_add0000<0>)
+     LDC:D                     0.308          addr_0
+    ----------------------------------------
+    Total                      2.990ns (1.688ns logic, 1.302ns route)
+                                       (56.5% logic, 43.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Reset'
+  Clock period: 9.384ns (frequency: 106.564MHz)
+  Total number of paths / destination ports: 26 / 6
+-------------------------------------------------------------------------
+Delay:               4.692ns (Levels of Logic = 3)
+  Source:            despla_2 (LATCH)
+  Destination:       rdata_0 (LATCH)
+  Source Clock:      Reset falling
+  Destination Clock: Reset rising
+
+  Data Path: despla_2 to rdata_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q             6   0.676   0.673  despla_2 (despla_2)
+     LUT4_D:I3->O          1   0.704   0.499  Mrom__varindex000051 (N6)
+     LUT4:I1->O            1   0.704   0.424  Mrom__varindex000022 (Mrom__varindex000022)
+     LUT4:I3->O            1   0.704   0.000  Mrom__varindex0000511 (Mrom__varindex0000)
+     LDE_1:D                   0.308          rdata_0
+    ----------------------------------------
+    Total                      4.692ns (3.096ns logic, 1.596ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vuelta_actual_cmp_eq00001'
+  Clock period: 5.289ns (frequency: 189.072MHz)
+  Total number of paths / destination ports: 528 / 32
+-------------------------------------------------------------------------
+Delay:               5.289ns (Levels of Logic = 32)
+  Source:            vuelta_actual_1 (LATCH)
+  Destination:       vuelta_actual_31 (LATCH)
+  Source Clock:      vuelta_actual_cmp_eq00001 falling
+  Destination Clock: vuelta_actual_cmp_eq00001 falling
+
+  Data Path: vuelta_actual_1 to vuelta_actual_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.676   0.622  vuelta_actual_1 (vuelta_actual_1)
+     LUT1:I0->O            1   0.704   0.000  Madd_vuelta_actual_add0000_cy<1>_rt (Madd_vuelta_actual_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  Madd_vuelta_actual_add0000_cy<1> (Madd_vuelta_actual_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<2> (Madd_vuelta_actual_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<3> (Madd_vuelta_actual_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<4> (Madd_vuelta_actual_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<5> (Madd_vuelta_actual_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<6> (Madd_vuelta_actual_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<7> (Madd_vuelta_actual_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<8> (Madd_vuelta_actual_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<9> (Madd_vuelta_actual_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<10> (Madd_vuelta_actual_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<11> (Madd_vuelta_actual_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<12> (Madd_vuelta_actual_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<13> (Madd_vuelta_actual_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<14> (Madd_vuelta_actual_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<15> (Madd_vuelta_actual_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<16> (Madd_vuelta_actual_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<17> (Madd_vuelta_actual_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<18> (Madd_vuelta_actual_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<19> (Madd_vuelta_actual_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<20> (Madd_vuelta_actual_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<21> (Madd_vuelta_actual_add0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<22> (Madd_vuelta_actual_add0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<23> (Madd_vuelta_actual_add0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<24> (Madd_vuelta_actual_add0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<25> (Madd_vuelta_actual_add0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<26> (Madd_vuelta_actual_add0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<27> (Madd_vuelta_actual_add0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<28> (Madd_vuelta_actual_add0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_vuelta_actual_add0000_cy<29> (Madd_vuelta_actual_add0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd_vuelta_actual_add0000_cy<30> (Madd_vuelta_actual_add0000_cy<30>)
+     XORCY:CI->O           1   0.804   0.000  Madd_vuelta_actual_add0000_xor<31> (vuelta_actual_add0000<31>)
+     LD:D                      0.308          vuelta_actual_31
+    ----------------------------------------
+    Total                      5.289ns (4.667ns logic, 0.622ns route)
+                                       (88.2% logic, 11.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'reloj'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.830ns (Levels of Logic = 1)
+  Source:            addr_1 (LATCH)
+  Destination:       An<1> (PAD)
+  Source Clock:      reloj falling
+
+  Data Path: addr_1 to An<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q             10   0.676   0.882  addr_1 (addr_1)
+     OBUF:I->O                 3.272          An_1_OBUF (An<1>)
+    ----------------------------------------
+    Total                      4.830ns (3.948ns logic, 0.882ns route)
+                                       (81.7% logic, 18.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Reset'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              4.581ns (Levels of Logic = 1)
+  Source:            rdata_0 (LATCH)
+  Destination:       Dn<5> (PAD)
+  Source Clock:      Reset rising
+
+  Data Path: rdata_0 to Dn<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            5   0.676   0.633  rdata_0 (rdata_0)
+     OBUF:I->O                 3.272          Dn_5_OBUF (Dn<5>)
+    ----------------------------------------
+    Total                      4.581ns (3.948ns logic, 0.633ns route)
+                                       (86.2% logic, 13.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.54 secs
+ 
+--> 
+
+Total memory usage is 191948 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

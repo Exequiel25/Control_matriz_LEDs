@@ -1,0 +1,26 @@
+//! **************************************************************************
+// Written by: Map M.81d on Sun Dec 05 23:16:01 2021
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "An<3>" LOCATE = SITE "F7" LEVEL 1;
+COMP "Dn<0>" LOCATE = SITE "B4" LEVEL 1;
+COMP "Dn<1>" LOCATE = SITE "A4" LEVEL 1;
+COMP "Dn<2>" LOCATE = SITE "D5" LEVEL 1;
+COMP "Dn<3>" LOCATE = SITE "C5" LEVEL 1;
+COMP "Dn<4>" LOCATE = SITE "D7" LEVEL 1;
+COMP "Dn<5>" LOCATE = SITE "C7" LEVEL 1;
+COMP "Dn<6>" LOCATE = SITE "F8" LEVEL 1;
+COMP "Dn<7>" LOCATE = SITE "E8" LEVEL 1;
+COMP "CLK_50MHz" LOCATE = SITE "C9" LEVEL 1;
+COMP "Reset" LOCATE = SITE "K17" LEVEL 1;
+PIN Reset_pin<0> = BEL "Reset" PINNAME PAD;
+PIN "Reset_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "An<0>" LOCATE = SITE "A6" LEVEL 1;
+COMP "An<1>" LOCATE = SITE "B6" LEVEL 1;
+COMP "An<2>" LOCATE = SITE "E7" LEVEL 1;
+NET "CLK_50MHz_BUFGP/IBUFG" BEL "CLK_50MHz_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
+NET "CLK_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 60%;
+SCHEMATIC END;
+
